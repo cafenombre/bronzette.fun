@@ -1,7 +1,7 @@
 <?php
 for ($e = 0; $e < 5; $e++)
 {
-  echo "bite";
+  echo "bite\n";
 }
 
 ?>
