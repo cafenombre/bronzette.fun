@@ -29,18 +29,5 @@ function CallApi($url){
     return $output;
 }
 
-$r = json_decode(CallAPI("http://ddragon.leagueoflegends.com/cdn/10.21.1/data/en_US/champion.json"), true)["data"];
-
-//var_dump($r["Shaco"]);
-
-$rando = rand(0, count($r));
-
-$i = 0;
-foreach($r as $champ){
-    if($i == $rando){
-        echo $champ["id"];
-    }
-    $i++;
-}
 
 ?>
