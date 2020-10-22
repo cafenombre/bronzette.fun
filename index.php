@@ -1,16 +1,12 @@
 <?php
-for ($e = 0; $e < 5; $e++)
-{
-  echo "bite\n";
-}
-
+include('config/init_api.php');
 ?>
-<p>
 
-enlo
-
-</p>
-
-<?php
-phpinfo();
-?>
+<form action="insert.php" method="post">
+    Value1: <input type="text" name = "field1" /><br/>
+    Value2: <input type="text" name = "field2" /><br/>
+    Value3: <input type="text" name = "field3" /><br/>
+    Value4: <input type="text" name = "field4" /><br/>
+    Value5: <input type="text" name = "field5" /><br/>
+    <input type="submit" />
+</form>
