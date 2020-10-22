@@ -2,6 +2,7 @@
 ::@echo off
 set httpsgit="https://github.com/cafenombre/bronzette.fun.git"
 
+::cd ..
 REM SET UP GIT ENV :
 ::git init
 ::git remote add origin %httpsgit%
