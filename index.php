@@ -10,3 +10,7 @@ for ($e = 0; $e < 5; $e++)
 enlo
 
 </p>
+
+<?php
+phpinfo();
+?>
