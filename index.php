@@ -56,16 +56,16 @@ foreach ($r as $champ) {
           <?php
           foreach ($builds as $build) {
           ?>
-          
-          <form method="post" action="utils/BuildController.php">
-            <li class="list-group-item">
-              <?php echo $build[1]; ?>
-              <button class="btn" name="deletebuild" value="<?php echo $build[0]; ?>" style="display:inline; position: absolute; right: 0;">
-                <i class="fas fa-dumpster"></i>
-              </button>
-              
-            </li>
-          </form>
+
+            <form method="post" action="utils/BuildController.php">
+              <li class="list-group-item">
+                <?php echo $build[1]; ?>
+                <button class="btn" name="deletebuild" value="<?php echo $build[0]; ?>" style="display:inline; position: absolute; right: 0;">
+                  <i class="fas fa-dumpster"></i>
+                </button>
+
+              </li>
+            </form>
 
           <?php
           }
@@ -79,10 +79,13 @@ foreach ($r as $champ) {
       <div class="card-body">
         <h5 class="card-title">Build aleatoire</h5>
         <div class="alert alert-primary" role="alert">
-        <img src="http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/<?php echo $championg; ?>.png" class="img-fluid" alt="Responsive image">
-          <?php           
-          echo " ".$builds[rand(0, count($builds)-1)][1]
-          ?>
+          <div class="w" style="display:flex;">
+            <img src="http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/<?php echo $championg; ?>.png" class="img-fluid" alt="Responsive image">
+            <div class="ml-4" style="width: 120px; height: 120px; background: center / cover no-repeat url('https://94.citoyens.com/wp-content/blogs.dir/2/files/2012/01/incendie-%C2%A9-Giorgio-Clementi-Fotolia.com_.jpg'); display:flex; justify-content: center; align-items: center;">
+              <span class="badge badge-primary" style=""><?php echo $builds[rand(0, count($builds) - 1)][1] ?></span>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
