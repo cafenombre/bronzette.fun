@@ -1,4 +1,5 @@
 <?php
+/*
 $username = "root";
 $password = "toor";
 $database = "testdb";
@@ -23,5 +24,6 @@ if ($result = $mysqli->query($query)) {
     }
 
 /*freeresultset*/
+
 $result->free();
 }

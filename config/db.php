@@ -27,5 +27,14 @@ function addBuild($mss, $nom, $type)
     return $result;
 }
 
+function delBuild($mss, $nom, $type)
+{
+    $query = "DELETE * FROM `builds` (`id`, `nom`, `type`) VALUES (NULL, '".$nom."', '".$type."');";
+
+    $result = $mss->query($query);
+
+    return $result;
+}
+
 
 ?>
