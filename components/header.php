@@ -12,11 +12,11 @@ include('config/db.php');
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
-    <title>Hello, world!</title>
+    <title>Bronzett.fun</title>
   </head>
 
 <body>
-  <nav class="navbar navbar-expand-xl navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-light bg-light" id="nav0">
   <a class="navbar-brand" href="#">Bronzette.fun</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,10 +32,10 @@ include('config/db.php');
         </button>
       </li>
       <li class="nav-item active">
-        <button class="btn" id="sun" onclick="toggglenight('sun', 'moon')" style="height:40px;width:40px;">
+        <button class="btn" id="sun" onclick="togglenight()" style="height:40px;width:40px;">
           <i class="fas fa-sun"></i>
         </button>
-        <button class="btn" id="moon" onclick="toggglenight('sun', 'moon')" style="height:40px;width:40px;display:none;">
+        <button class="btn" id="moon" onclick="togglenight()" style="height:40px;width:40px;display:none;">
           <i class="far fa-moon"></i>
         </button>
       </li>
