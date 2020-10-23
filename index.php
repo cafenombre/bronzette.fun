@@ -27,11 +27,20 @@ foreach ($r as $champ) {
 
 
 <body>
-
   <div class="row">
     <div class="card col-3 m-3 ml-5">
-      <div class="card-body">
-        <h5 class="card-title">Creer un build</h5>
+      <button class="btn" id="button1" onclick="showhide('card1', 'col2', 'button1', 'button2')" style="height:40px;width:40px;">
+        <svg width="1еm" height="1em" viewBox="0 0 16 16" class="bi bi-caret-down-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+        </svg>
+      </button>
+      <button class="btn" id="button2" onclick="showhide('card1', 'col2', 'button1', 'button2')" style="height:40px;width:40px; display:none;">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+        </svg>
+      </button>
+      <div class="card-body" id="card1">
+        <h5 class="card-title">Créer un build</h5>
         <form action="utils/BuildController.php" method="post">
           <div class="form-group">
             <label for="build">Build</label>
@@ -47,7 +56,7 @@ foreach ($r as $champ) {
       </div>
     </div>
 
-    <div class="card col-3 m-3">
+    <div class="card col-3 m-3" id="col2">
       <div class="card-body">
         <h5 class="card-title">Liste des builds</h5>
         <ul class="list-group list-group-flush">
@@ -74,10 +83,9 @@ foreach ($r as $champ) {
         </ul>
       </div>
     </div>
-
     <div class="card col-3 mr-1 m-3">
       <div class="card-body">
-        <h5 class="card-title">Build aleatoire</h5>
+        <h5 class="card-title">Build aléatoire</h5>
         <div class="alert alert-primary" role="alert">
           <div class="w" style="display:flex;">
             <img src="http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/<?php echo $championg; ?>.png" class="img-fluid" alt="<?php echo $championg; ?>">
