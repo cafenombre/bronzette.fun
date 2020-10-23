@@ -1,5 +1,6 @@
 //console.log('zoz gg');
-function showhide(card1, card2, button1, button2) {
+function showhide(card1, card2, button1, button2)
+{
   var x = document.getElementById(card1);
   var y = document.getElementById(card2);
   var j = document.getElementById(button1);
@@ -18,5 +19,22 @@ function showhide(card1, card2, button1, button2) {
     y.style.display = "none";
     j.style.display = "none";
     k.style.display = "block";
+  }
+}
+
+function toggglenight(sun, moon)
+{
+  var x = document.getElementById(sun);
+  var y = document.getElementById(moon);
+
+  if (x.style.display === "none")
+  {
+    x.style.display = "block";
+    y.style.display = "none";
+  }
+  else
+  {
+    x.style.display = "none";
+    y.style.display = "block";
   }
 }
