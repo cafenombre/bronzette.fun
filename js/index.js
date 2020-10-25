@@ -1,24 +1,24 @@
-//console.log('zoz gg');
-function showhide(card1, card2, button1, button2)
-{
-  var x = document.getElementById(card1);
-  var y = document.getElementById(card2);
-  var j = document.getElementById(button1);
-  var k = document.getElementById(button2);
 
-  if (x.style.display === "none")
+function showhide()
+{
+  var cardone = document.getElementById("card1");
+  var cardtwo = document.getElementById("card2");
+  var buttonone = document.getElementById("button1");
+  var buttontwo = document.getElementById("button2");
+
+  if (buttontwo.style.display === "block")
   {
-    x.style.display = "block";
-    y.style.display = "block";
-    j.style.display = "block";
-    k.style.display = "none";
+    cardone.style.display = "block";
+    cardtwo.style.display = "block";
+    buttonone.style.display = "block";
+    buttontwo.style.display = "none";
   }
   else
   {
-    x.style.display = "none";
-    y.style.display = "none";
-    j.style.display = "none";
-    k.style.display = "block";
+    cardone.style.display = "none";
+    cardtwo.style.display = "none";
+    buttonone.style.display = "none";
+    buttontwo.style.display = "block";
   }
 }
 
