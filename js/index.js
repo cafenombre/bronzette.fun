@@ -6,19 +6,19 @@ function showhide()
   var buttonone = document.getElementById("button1");
   var buttontwo = document.getElementById("button2");
 
-  if (buttontwo.style.display === "block")
-  {
-    cardone.style.display = "block";
-    cardtwo.style.display = "block";
-    buttonone.style.display = "block";
-    buttontwo.style.display = "none";
-  }
-  else
+  if (buttontwo.style.display === "none")
   {
     cardone.style.display = "none";
     cardtwo.style.display = "none";
     buttonone.style.display = "none";
     buttontwo.style.display = "block";
+  }
+  else
+  {
+    cardone.style.display = "block";
+    cardtwo.style.display = "block";
+    buttonone.style.display = "block";
+    buttontwo.style.display = "none";
   }
 }
 

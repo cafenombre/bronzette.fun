@@ -26,7 +26,7 @@ var_dump($pingux);*/
 ?>
 
     <div class="row">
-      <div class="card col-3 m-3 ml-5" id="card1">
+      <div class="card col-3 m-3 ml-5" id="card1" style="display: none">
         <div class="card-body">
           <h5 class="card-title">Créer un build</h5>
           <form action="utils/BuildController.php" method="post">
@@ -44,7 +44,7 @@ var_dump($pingux);*/
         </div>
       </div>
 
-      <div class="card col-3 m-3" id="card2">
+      <div class="card col-3 m-3" id="card2"style=" display: none">
         <div class="card-body">
           <h5 class="card-title">Liste des builds</h5>
           <ul class="list-group list-group-flush">
