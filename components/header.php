@@ -24,10 +24,10 @@ include('config/db.php');
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <button class="btn" id="button1" onclick="showhide('card1', 'col2', 'button1', 'button2')" style="height:40px;width:40px;">
+        <button class="btn" id="button1" onclick="showhide()" style="height:40px;width:40px;">
           <i class="fas fa-caret-down"></i>
         </button>
-        <button class="btn" id="button2" onclick="showhide('card1', 'col2', 'button1', 'button2')" style="height:40px;width:40px; display:none;">
+        <button class="btn" id="button2" onclick="showhide()" style="height:40px;width:40px; display:none;">
           <i class="fas fa-caret-right"></i>
         </button>
       </li>

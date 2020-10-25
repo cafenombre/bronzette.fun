@@ -20,13 +20,13 @@ foreach ($r as $champ) {
   $i++;
 }
 
-//$pingux = json_decode(CallApi("​https://127.0.0.1:2999/liveclientdata/badvampy123"), true);
-//var_dump($pingux);
+/*$pingux = json_decode(CallApi("​https://127.0.0.1:2999/liveclientdata/badvampy123"), true);
+var_dump($pingux);*/
 
 ?>
 
     <div class="row">
-      <div class="card col-3 m-3 ml-5">
+      <div class="card col-3 m-3 ml-5" id="card1">
         <div class="card-body">
           <h5 class="card-title">Créer un build</h5>
           <form action="utils/BuildController.php" method="post">
@@ -44,7 +44,7 @@ foreach ($r as $champ) {
         </div>
       </div>
 
-      <div class="card col-3 m-3">
+      <div class="card col-3 m-3" id="card2">
         <div class="card-body">
           <h5 class="card-title">Liste des builds</h5>
           <ul class="list-group list-group-flush">
