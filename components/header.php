@@ -40,10 +40,10 @@ include('config/db.php');
         </button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">New Build</a>
+        <a class="nav-link" onclick="randbuild()" href="#">New Build</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">New Championg</a>
+        <a class="nav-link" onclick="randchamp()" href="#">New Championg</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>

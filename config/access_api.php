@@ -6,7 +6,7 @@ function CallApi($url){
 
     // create & initialize a curl session
     $curl = curl_init();
-    $apiKey = "RGAPI-015b5a64-2c6b-49b9-8c8f-441712eaf13a";
+    $apiKey = "RGAPI-956a0547-c8ab-4a3d-b14e-0d098d57016e";
 
     // set our url with curl_setopt()
     curl_setopt($curl, CURLOPT_URL, $url);

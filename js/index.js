@@ -78,3 +78,27 @@ function togglenight()
     bo.classList.add("darkest");
   }
 }
+
+function randbuild()
+{
+  var output = document.getElementById("buildz");
+  rand = Math.floor(Math.random() * Math.floor(output.title));
+  console.log(rand);
+}
+
+function randchamp()
+{
+  var output = document.getElementById("champio");
+  var ritoapi = "http://ddragon.leagueoflegends.com/cdn/10.21.1/data/en_US/champion.json";
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var champion = JSON.parse(this.responseText);
+  //  console.log (Object.keys(champion.data));
+    var rand = Math.floor(Math.random() * Math.floor(151));
+    output.src = `http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/${Object.keys(champion.data)[rand]}.png`;
+    }
+  };
+  xmlhttp.open("GET", ritoapi, true);
+  xmlhttp.send();
+}

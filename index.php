@@ -12,6 +12,7 @@ $builds = getAllBuilds($conn);
 $r = json_decode(CallAPI("http://ddragon.leagueoflegends.com/cdn/10.21.1/data/en_US/champion.json"), true)["data"];
 $rando = rand(0, count($r)-1);
 $i = 0;
+$maxx = count($builds);
 $championg = "";
 foreach ($r as $champ) {
   if ($i == $rando) {
@@ -76,9 +77,9 @@ var_dump($pingux);*/
           <h5 class="card-title">Build aléatoire</h5>
           <div class="alert alert-secondary" role="alert">
             <div class="w" style="display:flex;">
-              <img src="http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/<?php echo $championg; ?>.png" class="img-fluid" alt="<?php echo $championg; ?>">
+              <img src="http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/<?php echo $championg; ?>.png" class="img-fluid" alt="<?php echo $championg; ?>" id="champio">
               <div class="ml-4" style="width: 120px; height: 120px; background: center / cover no-repeat url('https://94.citoyens.com/wp-content/blogs.dir/2/files/2012/01/incendie-%C2%A9-Giorgio-Clementi-Fotolia.com_.jpg'); display:flex; justify-content: center; align-items: center;">
-                <span class="badge badge-primary" style="font-size: 90%;"><?php echo $builds[rand(0, count($builds) - 1)][1] ?></span>
+                <span class="badge badge-primary" style="font-size: 90%;" id="buildz" title="<?php echo json_encode($maxx) ?>"><?php echo $builds[rand(0, count($builds) - 1)][1] ?></span>
               </div>
             </div>
           </div>
