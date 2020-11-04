@@ -35,7 +35,7 @@ include('config/db.php');
         <button class="btn" id="sun" onclick="togglenight()" style="height:40px;width:40px;">
           <i class="fas fa-sun"></i>
         </button>
-        <button class="btn" id="moon" onclick="togglenight()" style="height:40px;width:40px;display:none;">
+        <button class="btn" id="moon" onclick="togglenight()" style="height:40px;width:40px;display:none;color:#C0C0C0;">
           <i class="far fa-moon"></i>
         </button>
       </li>

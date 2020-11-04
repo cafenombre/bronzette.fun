@@ -26,6 +26,8 @@ function togglenight()
 {
   var x = document.getElementById("sun");
   var y = document.getElementById("moon");
+  var btn1 = document.getElementById("button1");
+  var btn2 = document.getElementById("button2");
   var navi = document.getElementById("nav0");
   var bo = document.getElementsByTagName("body")[0];
   var cards = document.getElementsByClassName("card");
@@ -35,6 +37,8 @@ function togglenight()
   {
     x.style.display = "block";
     y.style.display = "none";
+    button1.style.color = "black";
+    button2.style.color = "black";
     navi.classList.toggle("navbar-light");
     navi.classList.toggle("bg-light");
     navi.classList.toggle("bg-dark");
@@ -61,6 +65,8 @@ function togglenight()
     navi.classList.toggle("navbar-light");
     navi.classList.toggle("bg-light");
     navi.classList.toggle("bg-dark");
+    button1.style.color = "white";
+    button2.style.color = "white";
     navi.classList.toggle("navbar-dark");
     while (i < cards.length)
     {
@@ -81,9 +87,24 @@ function togglenight()
 
 function randbuild()
 {
+  var mysql      = require('mysql');
+  var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'cccv',
+    database : 'builds'
+  });
+
+  connection.connect();
+
+  connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+    if (error) throw error;
+    console.log('The solution is: ', results[0].solution);
+  });
+
+  connection.end();
   var output = document.getElementById("buildz");
-  rand = Math.floor(Math.random() * Math.floor(output.title));
-  console.log(rand);
+//  rand = Math.floor(Math.random() * Math.floor(output.title)) + 1;
 }
 
 function randchamp()
@@ -94,7 +115,6 @@ function randchamp()
   xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var champion = JSON.parse(this.responseText);
-  //  console.log (Object.keys(champion.data));
     var rand = Math.floor(Math.random() * Math.floor(151));
     output.src = `http://ddragon.leagueoflegends.com/cdn/10.21.1/img/champion/${Object.keys(champion.data)[rand]}.png`;
     }
